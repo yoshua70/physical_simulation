@@ -33,15 +33,7 @@ class Vector(list):
       product = tuple(a * other for a in self)
       return Vector(*product)
 
-  def norm(self):
+  def __mod__(self):
     """ Return the norm of self vector """
     return math.sqrt(sum(a ** 2 for a in self))
 
-
-
-v1 = Vector(1, 2, 3)
-v2 = Vector(2, 5, 0)
-v3 = v1 + v2
-print(v1.norm())
-print(v1 + v2)
-print(v3)
